@@ -1,0 +1,22 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.sobre-mi{
+    height: 50rem;
+    padding: 2rem;
+    color: vr.$blanco;
+    background-color: vr.$azul-oscuro;
+
+    &__contenido{
+        max-width: 60rem;
+        text-align: center;
+    }
+
+    &__titulo{
+        margin-bottom: 1rem;
+    }
+
+    &__descripcion{
+        font-size: 2rem;
+    }
+}

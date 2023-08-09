@@ -1,0 +1,32 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.articulos{
+    &__titulo{
+        margin-top: 5rem;
+    }
+
+    &__boton{
+        margin-top: 1rem;
+        font-size: 2rem;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        background-color: vr.$azul-oscuro;
+        color: vr.$primario;
+        border: none;
+
+        &:hover{
+            background-color: darken(vr.$primario,5%);
+        }
+    }
+
+    .card{
+        width: 80%;
+        max-width: 60rem;
+        margin: 2rem;
+    }
+}
+
+.card-header{
+    font-weight: bold;
+}

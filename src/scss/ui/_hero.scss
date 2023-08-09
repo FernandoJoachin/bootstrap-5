@@ -1,0 +1,40 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.hero{
+    background-color: vr.$gris;
+    min-height: 45rem;
+    text-align: center;
+
+    &__principal{
+        padding: 3rem;
+    }
+
+    &__principal-img{
+        width: 15rem;
+        height: 15rem;
+        margin: 2rem;
+    }
+
+    &__titulo{
+        font-size: 2.5rem;
+        @include mxn.telefono{
+            font-size: 4.4rem;
+        }
+    }
+
+    &__texto{
+        font-size: 2rem;
+        @include mxn.telefono{
+            font-size: 3.4rem;
+        }
+        color: #615151;
+    }
+
+    &__inferior-img{
+        @include mxn.tablet{
+            max-width: 60rem;
+        }
+    }
+
+}

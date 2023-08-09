@@ -1,0 +1,19 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.navbar{
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand{
+    display: none; 
+    @include mxn.lg{
+        display: block;
+    }  
+}

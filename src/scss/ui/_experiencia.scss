@@ -1,0 +1,51 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+.experiencia{
+    padding: 4rem 4rem 6rem 4rem;
+
+    &__columna{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        border: 0.2rem solid vr.$gris-oscuro;
+        padding: 2rem;
+        transition: all 0.3s ease-in;
+
+        &:hover{
+            color: vr.$blanco;
+            background-color: vr.$azul-oscuro;
+
+            i{
+                color: vr.$azul-oscuro;
+                background-color: vr.$blanco;
+            }
+        }
+    }
+
+    &__titulo{
+        padding: 2rem;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    i{
+        font-size: 4rem;
+        color: vr.$primario;
+        background-color: vr.$azul-oscuro;
+        padding: 1rem 2rem;
+        border-radius: 50%;
+    }
+
+    &__badges{
+        font-size: 2rem;
+        font-weight: 900;
+        margin: 1rem 0;
+      }
+}
+
+.badge{
+    margin: 5px;
+}
+  
+  
+  

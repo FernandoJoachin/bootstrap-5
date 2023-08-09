@@ -1,0 +1,80 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.proyectos{
+    padding: 4rem;
+
+    &__contenido{
+        padding-top: 6rem;
+        margin-bottom: 4rem;
+    }
+
+    &__boton{
+        font-size: 2rem;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        background-color: vr.$azul-oscuro;
+        color: vr.$primario;
+        border: none;
+
+        &:hover{
+            background-color: darken(vr.$primario,5%);
+        }
+    }
+}
+
+.proyecto{
+    position: relative;
+
+    &:hover{
+        .proyecto__imagen{
+            opacity: 0.2;
+        }
+        
+        .proyecto__overlay{
+            opacity: 1;
+        }
+    }
+
+    &__imagen{
+        display: block;
+        height: 100%;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 2rem;
+        transition: all 0.3s ease;
+    }
+
+    &__overlay{
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    &__titulo{
+        font-weight: bold;
+        font-size: 2rem;
+
+        @media (min-width: 400px){
+            font-size: 2.8rem;
+        }
+    }
+
+    &__iconos{
+        display: flex;
+    }
+
+    i{
+        color: vr.$negro;
+        font-size: 4rem;
+        margin: 1rem;
+
+        @include mxn.telefono{
+            font-size: 6rem;
+        }
+    }
+}
