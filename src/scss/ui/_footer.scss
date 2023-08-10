@@ -1,0 +1,47 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.footer{
+    background-color: vr.$azul-oscuro;
+    color: vr.$blanco;
+
+    &__logo{
+        width: 8rem;
+        height: 8rem;
+        margin: 1rem;
+    }
+
+    &__texto{
+        font-size: 2rem;
+        padding: 2rem;
+        font-family: 'Quicksand', sans-serif;
+
+        span{
+            display: block;
+        }
+    }
+
+    &__icono{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5rem;
+        height: 5rem;
+        padding: 1rem;
+        margin: 1rem;
+        border: 0.2rem solid vr.$blanco;
+        border-radius: 50%;
+        transition: all 0.2s ease-in;
+
+        &:hover{
+            background-color: vr.$blanco;
+            border: 0.2rem solid rgb(13, 110, 253);
+        }
+    }
+
+    &__copyright{
+        font-size: 1.5rem;
+        color: #aeaeae;
+        padding: 2rem;
+    }
+}

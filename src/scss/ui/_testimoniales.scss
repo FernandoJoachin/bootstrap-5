@@ -1,0 +1,56 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.testimoniales{
+    padding: 4rem 4rem 8rem 4rem;
+
+    .carousel{
+        max-width: 80rem;
+    }
+
+    .carousel-item {
+        height: 50rem;
+    }
+}
+
+.testimonial{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &__imagen{
+        width: 12rem;
+        height: 12rem;
+        margin: 1rem 1rem 2rem 1rem;
+
+        @include mxn.tablet{
+            width: 20rem;
+            height: 20rem;
+        }
+    }
+
+    &__descripcion{
+        font-size: 1.2rem;
+        max-width: 70%;
+        text-align: center;
+        font-family: 'Share Tech Mono', monospace;
+
+        @include mxn.tablet{
+            font-size: 2rem;
+        }
+    }
+
+    &__cliente{
+        font-weight: bold;
+        text-align: center;
+        margin: 1rem;
+    }
+
+    &__nombre,  &__cargo{
+        line-height: 1.5;
+        margin: 0;
+    }
+}
