@@ -1,0 +1,51 @@
+@use "base/variables" as vr;
+@use "base/mixins" as mxn;
+
+.contacto{
+    background-color: vr.$azul-oscuro;
+
+    &__contenedor{
+        max-width: 110rem;
+        min-height: 20rem;
+        padding: 2rem;
+    }
+
+    &__rectangulo{
+        margin-top: -5rem;
+        background-color: rgb(13, 110, 253);
+        border-radius: 1rem;
+        box-shadow: 0rem 0.1rem 0.4rem 0.1rem vr.$blanco;
+    }
+
+    .row{
+        width: 100%;
+        height: 15rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__titulo{
+        color: vr.$blanco;
+    }
+
+    &__descripcion{
+        color: vr.$blanco;
+        font-size: 1.2rem;
+    }
+
+    &__boton{
+        color: vr.$blanco;
+        font-weight: bold;
+        background-color: transparent;
+        border: 0.2rem solid vr.$blanco;
+        padding: 1.5rem 2em;
+        margin: 1rem;
+        border-radius: 10rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover{
+            background-color: vr.$blanco;
+            color: vr.$negro;
+        }
+    }
+}
